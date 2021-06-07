@@ -40,13 +40,12 @@ public class TxService {
 
 	}
 	
-	/*
-	 * @Around("p1()") public void aroundTest(ProceedingJoinPoint jp) {
-	 * System.out.println("Before b.method()"); try { Object obj =
-	 * jp.proceed();//cal business method System.out.println(obj); //on success }
-	 * catch (Throwable e) { // on failure e.printStackTrace(); } //at any case
-	 * System.out.println("After b.method"); }
-	 */
+	  @Around("p1()") public void aroundTest(ProceedingJoinPoint jp) {
+	  System.out.println("Before b.method()"); try { Object obj =
+	  jp.proceed();//cal business method System.out.println(obj); //on success }
+	  catch (Throwable e) { // on failure e.printStackTrace(); } //at any case
+	  System.out.println("After b.method"); }
+	 
 
 
 	 @Before("p1()") // joinpoint 
